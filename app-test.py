@@ -3,14 +3,6 @@
 # @Author   : Zhxu
 # @Time     : 18-12-27 下午9:40
 
-
-"""
-Requirement:
-1.Users should be able to log in and out.
-2.Once logged in, users should be able to post.
-3.Finally, users should be able to view the posts.
-"""
-
 import unittest
 import os
 import tempfile
@@ -34,7 +26,13 @@ class BasicTestCase(unittest.TestCase):
         self.assertEqual(tester, True)
 
 
-class FlaskrTestCase(unittest.TestCase):
+class FlaskxTestCase(unittest.TestCase):
+    """
+    Requirement:
+    1.Users should be able to log in and out.
+    2.Once logged in, users should be able to post.
+    3.Finally, users should be able to view the posts.
+    """
 
     def setUp(self):
         """Set up a blank temp database before each test."""
@@ -64,7 +62,7 @@ class FlaskrTestCase(unittest.TestCase):
     def test_empty_db(self):
         """Ensure database is blank."""
         rv = self.app.get('/')
-        assert b'No entries here so far' in rv.data
+        assert b'No entries yet. Add some!' in rv.data
 
     def test_login_logout(self):
         """Test login and logout using helper functions."""
