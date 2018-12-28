@@ -21,6 +21,18 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 
+# @app.route('/')
+# def hello():
+#     return 'Hello, World!'
+
+
+"""
+Essentially, we want to open a database connection, 
+create the database based on the schema if it doesn't already exist, 
+then close the connection each time a test is ran.
+"""
+
+
 # connect to database
 def connect_db():
     """Connects to the database."""

@@ -1,3 +1,4 @@
+// Function to remove the post from the database
 $(function() {
   console.log('ready!'); // sanity check
 });
